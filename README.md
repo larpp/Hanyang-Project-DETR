@@ -16,3 +16,9 @@ Detection model은 DETR로 선택했다.
 
 ## Environments
 `nvidia/cuda:11.2.2-cudnn8-devel-ubuntu20.04` 도커 이미지를 사용했다.
+```
+pip install torch==1.10.1+cu111 torchvision==0.11.2+cu111 torchaudio==0.10.1 -f https://download.pytorch.org/whl/cu111/torch_stable.html
+```
+Pytorch 버전은 1.10.1을 사용했다.
+
+## Data Preparation
