@@ -51,3 +51,4 @@ Inference할 이미지들의 결과값 (이미지, box 정보)가 저장된다.
 python inference.py
 ```
 ## Results
+![스크린샷 2024-03-30 155447](https://github.com/larpp/Hanyang-Project-DETR/assets/87048326/15e1c4bd-0fe1-4152-806b-8fe5e6758585)
