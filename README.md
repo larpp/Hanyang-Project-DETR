@@ -7,3 +7,7 @@
 - 이를 초해상력 현미경 STORM을 이용해 촬영하고 이미지 파일로 제공받고 DETR 모델을 이용해 detection 해보았다.
 
 - 제공받은 dataset은 [Roboflow](https://universe.roboflow.com/hj-lim/cluster-3puxp)에서 확인할 수 있다.
+
+![스크린샷 2024-03-30 145934](https://github.com/larpp/Hanyang-Project-DETR/assets/87048326/e4b83ee2-9b1d-4257-81f5-b317e7a647af)
+
+## Model
