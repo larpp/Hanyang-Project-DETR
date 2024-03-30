@@ -47,6 +47,7 @@ python eval.py
 
 ### Inference
 Inference할 이미지들의 결과값 (이미지, box 정보)가 저장된다.
+Box 정보는 (x_center, y_center, width, height, confidence, area) 정보가 csv 파일로 저장된다.
 ```
 python inference.py
 ```
