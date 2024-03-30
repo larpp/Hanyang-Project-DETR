@@ -1,12 +1,20 @@
 # CDV Detection - DETR
 ## Project
-- 한양대학교 [STORM Lab](https://doorykimlab.wixsite.com/spectromicroscopylab)과의 공동 project로 제공받은 데이터의 detection을 해주는 역할을 맡았다.
+한양대학교 [STORM Lab](https://doorykimlab.wixsite.com/spectromicroscopylab)과의 공동 project로 제공받은 데이터의 detection을 해주는 역할을 맡았다.
 
 - Cell-derived vesicle (CDV)란 Extracellular vesicle (EV)의 일종으로, Exosome과 유사하게 세포간 정보전달체 및 약물전달체로 기능할 수 있는 신개념의 나노 입자이다.
 
-- 이를 초해상력 현미경 STORM을 이용해 촬영하고 이미지 파일로 제공받고 DETR 모델을 이용해 detection 해보았다.
+- CDV에 염색약을 뿌리면 sample에 염색약이 달라붙어 형광성을 띄게 되는데 이를 초해상력 현미경 STORM을 이용해 촬영한다.
 
-- 제공받은 dataset은 [Roboflow](https://universe.roboflow.com/hj-lim/cluster-3puxp)에서 확인할 수 있다.
+- STORM은 0.014초마다 촬영하여 총 50,000번을 촬영해 이를 합쳐 하나의 이미지를 만들어낸다.
+
+- 이 이미지에서 유의미한 cluster를 찾아 bounding box를 그려 box의 크기와 box안의 점들의 개수를 count한다.
+
+- x축이 Localization number (점들의 개수), y축이 FWHM (Full Width at Half Maximum, 여기서 함수는 Gaussian 함수를 사용)인 그래프를 만든다.
+
+- 여기서 우리의 역할은 detection model를 통해 box의 정보를 넘겨주는 것이다.
+
+제공받은 dataset은 [Roboflow](https://universe.roboflow.com/hj-lim/cluster-3puxp)에서 확인할 수 있다.
 
 ![스크린샷 2024-03-30 145934](https://github.com/larpp/Hanyang-Project-DETR/assets/87048326/e4b83ee2-9b1d-4257-81f5-b317e7a647af)
 
