@@ -19,6 +19,18 @@ Detection model은 DETR로 선택했다.
 ```
 pip install torch==1.10.1+cu111 torchvision==0.11.2+cu111 torchaudio==0.10.1 -f https://download.pytorch.org/whl/cu111/torch_stable.html
 ```
-Pytorch 버전은 1.10.1을 사용했다.
+Pytorch 버전은 1.10.1, python 버전은 3.8.x 버전을 사용했다.
 
 ## Data Preparation
+Dataset은 COCO dataset format을 따랐다.
+```
+path/
+  train/  # images and annotation json file
+  valid/  # images and annotation json file
+  test/   # images and annotation json file
+```
+annotation json file은 모두 _annotations.coco.json 이라는 이름으로 통일해주었다.
+```
+data/  # iamges
+````
+
