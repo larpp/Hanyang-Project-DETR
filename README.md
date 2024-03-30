@@ -33,4 +33,7 @@ annotation json file은 모두 _annotations.coco.json 이라는 이름으로 통
 ```
 data/  # iamges
 ````
-
+## Training
+```
+pyhton train.py
+```
