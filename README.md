@@ -11,3 +11,8 @@
 ![스크린샷 2024-03-30 145934](https://github.com/larpp/Hanyang-Project-DETR/assets/87048326/e4b83ee2-9b1d-4257-81f5-b317e7a647af)
 
 ## Model
+![스크린샷 2024-03-30 150644](https://github.com/larpp/Hanyang-Project-DETR/assets/87048326/5458d1db-617b-413b-93bf-46810d0ce851)
+Detection model은 DETR로 선택했다.
+
+## Environments
+`nvidia/cuda:11.2.2-cudnn8-devel-ubuntu20.04` 도커 이미지를 사용했다.
