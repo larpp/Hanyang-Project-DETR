@@ -37,3 +37,14 @@ data/  # iamges
 ```
 pyhton train.py
 ```
+## Evaluation
+Test dataset의 성능을 측정한다.
+```
+python eval.py
+```
+
+## Inference
+Inference할 이미지들의 결과값 (이미지, box 정보)가 저장된다.
+```
+python inference.py
+```
