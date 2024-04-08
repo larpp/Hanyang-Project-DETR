@@ -34,16 +34,22 @@ if __name__=='__main__':
     csv_path = create_new_directory(os.path.join(result_path, 'data_csv'))
     results_path = create_new_directory(os.path.join(result_path, 'img'))
 
+    time_li = []
     for i in range(len(image_lst)):
         image = cv2.imread(image_lst[i])
         image_id = image_lst[i].split('/')[-1][:-4]
         box_annotator = sv.BoxAnnotator()
 
+        start_event = torch.cuda.Event(enable_timing=True)
+        end_event = torch.cuda.Event(enable_timing=True)
+        
         with torch.no_grad():
 
             # load image and predict
             inputs = image_processor(images=image, return_tensors='pt').to(args.device)
+            start_event.record()
             outputs = model(**inputs)
+            end_event.record()
 
             # post-process
             target_sizes = torch.tensor([image.shape[:2]]).to(args.device)
@@ -52,6 +58,10 @@ if __name__=='__main__':
                 threshold=args.confidence_threshold, 
                 target_sizes=target_sizes
             )[0]
+
+        torch.cuda.synchronize()
+        time_taken = start_event.elapsed_time(end_event)
+        time_li.append(time_taken * 1e-3)
 
         detections = sv.Detections.from_transformers(transformers_results=results).with_nms(threshold=args.iou_threshold)
         class_id = ["cluster" for _ in detections.class_id]
@@ -89,3 +99,5 @@ if __name__=='__main__':
 
         pred_img_path = os.path.join(results_path, f"pred_img_{image_id}.png")
         cv2.imwrite(pred_img_path, image)
+
+    print(f"Average time on GPU pre image: {sum(time_li)/len(img_lst)}")
