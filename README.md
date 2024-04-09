@@ -18,7 +18,7 @@
 
 ![스크린샷 2024-03-30 145934](https://github.com/larpp/Hanyang-Project-DETR/assets/87048326/e4b83ee2-9b1d-4257-81f5-b317e7a647af)
 
-기존에는 hand-crafted로 label 즉, box annotation을 만들어서 많은 시간과 노동이 필요했다. 인공지능을 이용해 자동으로 detection을 하는 것이 목표다. 여러 detection model을 돌려보고 서로 비교해 보았다. 여기서는 그 중 DETR을 다뤄본다.
+기존에는 hand-crafted로 label 즉, box annotation을 만들어서 많은 시간과 노동이 필요했다. 인공지능을 이용해 자동으로 detection을 하는 것이 목표다. 여러 detection model을 돌려보고 서로 비교해 보았다. (Faster RCNN, DETR, Deformable DETR, YOLOv6) 여기서는 그 중 DETR을 다뤄본다.
 
 ## Model
 ![스크린샷 2024-03-30 150644](https://github.com/larpp/Hanyang-Project-DETR/assets/87048326/5458d1db-617b-413b-93bf-46810d0ce851)
