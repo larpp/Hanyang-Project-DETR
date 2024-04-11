@@ -50,7 +50,6 @@ if __name__=='__main__':
         pred_box_len = len(pred_box_li) # pred box 개수
         _miou = total_iou / pred_box_len
         miou += _miou
-        print("OK")
         
 
     evaluator.synchronize_between_processes()
