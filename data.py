@@ -20,6 +20,6 @@ def make_dataset(mode_directory, train=False):
 
 def make_dataloader(mode_directory, batch_size, train=False, shuffle=False):
     DATASET = make_dataset(mode_directory, train)
-    DATALOADER = DataLoader(dataset=DATASET, collate_fn=collate_fn, batch_size=batch_size, shuffle=shuffle)
+    DATALOADER = DataLoader(dataset=DATASET, collate_fn=collate_fn, batch_size=batch_size, shuffle=shuffle, num_workers=4)
 
     return DATALOADER
