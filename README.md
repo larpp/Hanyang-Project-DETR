@@ -92,8 +92,8 @@ python benchmark.py
 
 | Model | AP | AP50 | AP75 | AP_s | AP_m |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| DETR | 0.391 | 0.884 | 0.238 | 0.265 | 0.394 |
-| Deformable DETR | 0.491 | 0.901 | 0.336 | 0.334 | 0.421 |
+| DETR | 39.1 | 88.4 | 23.8 | 26.5 | 39.4 |
+| Deformable DETR | 41.9 | 80.1 | 33.6 | 33.4 | 42.1 |
 ## Reference
 <https://github.com/roboflow/notebooks/blob/main/notebooks/train-huggingface-detr-on-custom-dataset.ipynb>
 <https://github.com/fundamentalvision/Deformable-DETR>
