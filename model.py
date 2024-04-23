@@ -265,7 +265,7 @@ class Detr(pl.LightningModule):
 
 
     # Inference 할 이미지는 annotations가 없으므로 빈 annoatation.json file을 먼저 만들어주자.
-    # json_preprocess.py를 먼저 실행
+    # predict_ann.py를 먼저 실행
     def predict_dataloader(self):
         args = parse_args()
         PREDICT_DATALOADER = make_dataloader(args.infer_directory, 1)
