@@ -1,16 +1,28 @@
-from model import Detr
+import torch
+import numpy as np
+import random
+import os
+
 from pytorch_lightning import Trainer
 from pytorch_lightning.loggers import WandbLogger
 import wandb
 from pytorch_lightning.callbacks import ModelCheckpoint
-import os
+
+from model import Detr
 from argparse_utils import parse_args
-from seed import seed
 
 
 def main(args):
-    seed()
+    RANDOM_SEED = args.seed
 
+    torch.manual_seed(RANDOM_SEED)
+    torch.cuda.manual_seed(RANDOM_SEED)
+    torch.backends.cudnn.deterministic = True
+    torch.backends.cudnn.benchmark = False
+    np.random.seed(RANDOM_SEED)
+    random.seed(RANDOM_SEED)
+
+    
     if args.eval:
         model = Detr(lr=1e-4, lr_backbone=1e-5, weight_decay=1e-4, train=False)
 
