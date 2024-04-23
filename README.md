@@ -82,6 +82,7 @@ python main.py --checkpoint <Hugging Face path> --best-map-path <ckpt path> --in
 ```
 
 ### (Optional) Inference time
+Model의 inference time을 측정한다. (FPS)
 ```
 python benchmark.py
 ```
