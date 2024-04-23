@@ -56,21 +56,37 @@ data/  # iamges
 ````
 ### Training
 ```
-pyhton train.py
+# DETR
+pyhton main.py
+
+# Deformable DETR
+python main.py --checkpoint SenseTime/deformable-detr
 ```
 ### Evaluation
 Test dataset의 성능을 측정한다.
 ```
-python eval.py
+python main.py --checkpoint <Hugging Face path> --best-map-path <ckpt path> --eval
 ```
 
 ### Inference
 Inference할 이미지들의 결과값 (이미지, box 정보)가 저장된다.
 Box 정보는 (x_center, y_center, width, height, confidence, area) 정보가 csv 파일로 저장된다.
+
+Inference할 이미지들은 annotations가 없으므로 임의로 하나 만들어준다.
 ```
-python inference.py
+python predict_ann.py
+```
+
+```
+python main.py --checkpoint <Hugging Face path> --best-map-path <ckpt path> --inference
+```
+
+### (Optional) Inference time
+```
+python benchmark.py
 ```
 ## Results
 ![스크린샷 2024-03-30 155447](https://github.com/larpp/Hanyang-Project-DETR/assets/87048326/15e1c4bd-0fe1-4152-806b-8fe5e6758585)
+
 ## Reference
 <https://github.com/roboflow/notebooks/blob/main/notebooks/train-huggingface-detr-on-custom-dataset.ipynb>
