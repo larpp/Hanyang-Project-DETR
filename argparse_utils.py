@@ -26,6 +26,7 @@ def parse_args():
     parser.add_argument('--result-directory', type=str, default='/home/detr_result', help='Directory of inference results')
     parser.add_argument('--eval', action='store_true')
     parser.add_argument('--inference', action='store_true')
+    parser.add_argument('--seed', type=int, default=42)
 
 
     parser.add_argument('--num_iters', type=int, default=40, help='total iters to benchmark speed')
