@@ -1,4 +1,4 @@
-# CDV Detection - DETR
+# CDV Detection - (Deformable) DETR
 ## Project
 한양대학교 [STORM Lab](https://doorykimlab.wixsite.com/spectromicroscopylab)과의 공동 project로 제공받은 데이터의 detection을 해주는 역할을 맡았다.
 
