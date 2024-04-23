@@ -1,12 +1,15 @@
-from transformers import DetrImageProcessor
 from argparse_utils import parse_args
 
 
 def collate_fn(batch):
     args = parse_args()
 
-    # image_processor = DetrImageProcessor.from_pretrained(CHECKPOINT)
-    image_processor = DetrImageProcessor.from_pretrained(args.checkpoint)
+    if args.checkpoint == 'facebook/detr-resnet-50':
+        from transformers import DetrImageProcessor
+        image_processor = DetrImageProcessor.from_pretrained(args.checkpoint)
+    else:
+        from transformers import AutoImageProcessor
+        image_processor = AutoImageProcessor.from_pretrained(args.checkpoint)
 
     # DETR authors employ various image sizes during training, making it not possible
     # to directly batch together images. Hence they pad the images to the biggest
