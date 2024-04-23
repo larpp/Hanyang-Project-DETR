@@ -86,7 +86,9 @@ python main.py --checkpoint <Hugging Face path> --best-map-path <ckpt path> --in
 python benchmark.py
 ```
 ## Results
+![image](https://github.com/larpp/Hanyang-Project-DETR/assets/87048326/5f9a762f-a1b0-4559-908d-ca84f39f9065)
 ![스크린샷 2024-03-30 155447](https://github.com/larpp/Hanyang-Project-DETR/assets/87048326/15e1c4bd-0fe1-4152-806b-8fe5e6758585)
 
 ## Reference
 <https://github.com/roboflow/notebooks/blob/main/notebooks/train-huggingface-detr-on-custom-dataset.ipynb>
+<https://github.com/fundamentalvision/Deformable-DETR>
