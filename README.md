@@ -87,7 +87,7 @@ python benchmark.py
 ```
 ## Results
 ![image](https://github.com/larpp/Hanyang-Project-DETR/assets/87048326/5f9a762f-a1b0-4559-908d-ca84f39f9065)
-![스크린샷 2024-03-30 155447](https://github.com/larpp/Hanyang-Project-DETR/assets/87048326/15e1c4bd-0fe1-4152-806b-8fe5e6758585)
+![11-1-4](https://github.com/larpp/Hanyang-Project-DETR/assets/87048326/9c256fec-34b8-4bd8-9b86-a596ce51da79)
 
 | Model | AP | AP50 | AP75 | AP_s | AP_m |
 |:---:|:---:|:---:|:---:|:---:|:---:|
