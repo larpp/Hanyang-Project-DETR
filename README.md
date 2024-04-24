@@ -96,6 +96,9 @@ python benchmark.py
 |:---:|:---:|:---:|:---:|:---:|:---:|
 | DETR | 39.1 | 88.4 | 23.8 | 26.5 | 39.4 |
 | Deformable DETR | 41.9 | 80.1 | 33.6 | 33.4 | 42.1 |
+
+IoU threshold : 0.5
+Confidence threshold : 0.5
 ## Reference
 <https://github.com/roboflow/notebooks/blob/main/notebooks/train-huggingface-detr-on-custom-dataset.ipynb>
 <https://github.com/fundamentalvision/Deformable-DETR>
