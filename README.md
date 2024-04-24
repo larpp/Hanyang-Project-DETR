@@ -18,6 +18,8 @@
 
 ![11-1-4](https://github.com/larpp/Hanyang-Project-DETR/assets/87048326/f0a22492-d189-4b10-bc62-efeb2e569076)
 
+Dataset은 위와 같은 GFP (Green Fluorescent Protein) data이다.
+
 기존에는 hand-crafted로 label 즉, box annotation을 만들어서 많은 시간과 노동이 필요했다. 인공지능을 이용해 자동으로 detection을 하는 것이 목표다. 여러 detection model을 돌려보고 서로 비교해 보았다. (Faster RCNN, DETR, Deformable DETR, YOLOv6) 여기서는 그 중 DETR과 Deformable DETR을 다뤄본다.
 
 - [Hugging Face](https://huggingface.co/models?pipeline_tag=object-detection&sort=trending)와 [Pytorch Lightning](https://lightning.ai/docs/pytorch/1.6.0/) 1.6.0 버전을 이용했다.
