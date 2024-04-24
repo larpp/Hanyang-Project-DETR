@@ -92,13 +92,16 @@ python benchmark.py
 ![image](https://github.com/larpp/Hanyang-Project-DETR/assets/87048326/5f9a762f-a1b0-4559-908d-ca84f39f9065)
 ![11-1-4](https://github.com/larpp/Hanyang-Project-DETR/assets/87048326/9c256fec-34b8-4bd8-9b86-a596ce51da79)
 
+
+IoU threshold : 0.5
+
+Confidence threshold : 0.5
+
 | Model | AP | AP50 | AP75 | AP_s | AP_m |
 |:---:|:---:|:---:|:---:|:---:|:---:|
 | DETR | 39.1 | 88.4 | 23.8 | 26.5 | 39.4 |
 | Deformable DETR | 41.9 | 80.1 | 33.6 | 33.4 | 42.1 |
 
-IoU threshold : 0.5
-Confidence threshold : 0.5
 ## Reference
 <https://github.com/roboflow/notebooks/blob/main/notebooks/train-huggingface-detr-on-custom-dataset.ipynb>
 <https://github.com/fundamentalvision/Deformable-DETR>
